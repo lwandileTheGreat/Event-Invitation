@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Thanks";
+}
+
+@model PartyInvites.Models.GuestResponse
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" /> </head>
+
+<body >
+    <img src="~/images/codeFluxThankYouMessage.png" style="width:60%"/>
+    <div class="text-center jumbotron">
+        <p>
+            <h3>Thank you, @Model.Name!</h3>
+            @if (Model.WillAttend == true)
+            {@:It's great that you're coming. <br /> It will be held at the following address : <br /> 06 park drive (663.30 km) <br /> 6001 <br /> Port Elizabeth,<br /> Eastern Cape. <br />
+
+                @:The food and drinks will already be prepared for you, and if you want to order a special type of meal click
+            <a class="nav-link" asp-action="Meals">here</a>
+            }
+            else
+            { @:Sorry to hear that you can't make it, but thanks for letting us know.
+            }
+        </p>
+        Click <a class="nav-link" asp-action="ListResponses">here</a>      to see who is  coming.
+    </div>
+</body>
+</html>

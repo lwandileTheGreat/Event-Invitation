@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+@model PartyInvites.Models.GuestResponse
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Meals</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+
+    <img src="~/images/CodeFluxLogo.png" />
+
+    <div class="text-center">
+
+
+        <form style="display:inline-block">
+
+            <input type="radio" value="MainMeal" id="TypeOfMeal" name="TypeOfMeal" checked />  Main meal <br />
+            <img src="~/images/mainMeal.jpg" />
+            <br />
+            <br />
+            <input type="radio" value="Vegan" id="TypeOfMeal" name="TypeOfMeal" /> Vegetarian <br />
+            <img src="~/images/vegan.jpg" />
+            <br />
+            <br />
+            <input type="radio" value="Vegan" id="TypeOfMeal" name="TypeOfMeal" /> Halaal <br />
+            <img src="~/images/halal.jpg" />
+            <br /> 
+            <br />
+            <input type="radio" value="Unspecified" id="TypeOfMeal" name="TypeOfMeal" /> Unspecified
+            <br />
+            <br />
+
+            <a class="btn btn-success" asp-action="Booking" style="margin-bottom:20px"> Book Now </a>
+        </form>
+
+    </div>
+</body>
+</html>
